@@ -1,0 +1,46 @@
+.task-item {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .label {
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+  
+  .edit-btn,
+  .save-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .edit-btn:hover,
+  .save-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .edit-input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+   
+  }
+  

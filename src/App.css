@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Container */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Responsive Grid Layout for Components */
+.components-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .components-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media (min-width: 1024px) {
+  .components-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Headers and Titles */
+h1, h2 {
+  text-align: center;
+  color: #0044cc;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Utility Classes */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Button Colors */
+button.primary {
+  background-color: #ff6f61;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.primary:hover {
+  background-color: #ff4c3b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button.secondary {
+  background-color: #17a2b8;
+  color: white;
+}
+
+button.secondary:hover {
+  background-color: #138496;
+}
+
+/* Global Input Fields */
+input[type="text"], input[type="search"], select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type="text"]::placeholder, input[type="search"]::placeholder {
+  color: #888;
+}
+
+/* Scrollable Areas */
+.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 8px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .components-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"], input[type="search"] {
+    padding: 10px;
   }
 }
+
+/* Task Labels Styling */
+.label {
+  background-color: #ffd700;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.label.urgent {
+  background-color: #dc3545;
+  color: white;
+}
+
+.label.work {
+  background-color: #007bff;
+  color: white;
+}
+
+.label.personal {
+  background-color: #28a745;
+  color: white;
+}
+
+.label.low-priority {
+  background-color: #ffc107;
+  color: #333;
+}
+
+/* Task Item Specifics */
+.task-item {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.task-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Card-like Components */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  color: #666;
+}
+
